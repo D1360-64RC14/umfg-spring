@@ -36,6 +36,6 @@ public class ClienteController {
             }
         }
 
-        return null;
+        return ResponseEntity.notFound().build();
     }
 }
