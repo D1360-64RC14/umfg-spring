@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMFG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="module" defer></script>
+</head>
+<body>
+    <h1>UMFG</h1>
+
+    <h2>Clientes</h2>
+
+    <fieldset>
+        <legend>Cadastrar</legend>
+
+        <form onsubmit="Cliente.cadastrar(fieldNome.value, fieldSobrenome.value, fieldDocumento.value)">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="fieldNome">
+            </div>
+            <div>
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="fieldSobrenome">
+            </div>
+            <div>
+                <label for="documento">Documento</label>
+                <input type="text" id="fieldDocumento">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Todos</legend>
+
+        <table id="tableCliente" onload="Client.loadTable()">
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Documento</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </fieldset>
+</body>
+</html>
